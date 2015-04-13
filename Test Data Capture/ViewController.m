@@ -17,9 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://122.160.230.125:8080/planupdate/"]];
-    
-    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,13 +42,13 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     self.responseString = [[NSString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding];
-    NSLog(@"Data: %@", self.responseString);
+//    NSLog(@"Data: %@", self.responseString);
     
     NSString *availableBalanceSpan = [ViewController scanString:self.responseString startTag:@"<div class=\"box-data-text-first\">Available balance<br />" endTag:@"</span>"];
     
     NSString *availableBalance = [ViewController scanString:availableBalanceSpan startTag:@"<span>" endTag:@" GB"];
-    NSLog(@"available balance: %@", availableBalance);
-
+//    NSLog(@"available balance: %@", availableBalance);
+    self.amountLeftLabel.text = availableBalance;
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -81,4 +78,18 @@
     return scanString;
 }
 
+- (IBAction)checkButtonPressed:(UIButton *)sender {
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://122.160.230.125:8080/planupdate/"]];
+    
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    UILocalNotification* local = [[UILocalNotification alloc]init];
+    if (local) {
+        local.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
+        local.alertBody = @"Hey this is my first local notification!!!";
+        //local.timeZone = [NSTimeZone defaultTimeZone];
+        [[UIApplication sharedApplication] scheduleLocalNotification:local];
+        
+    }
+}
 @end

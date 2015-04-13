@@ -12,7 +12,9 @@
 {
     NSMutableData *_responseData;
 }
+- (IBAction)checkButtonPressed:(UIButton *)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *amountLeftLabel;
 @property (strong, nonatomic) NSString *responseString;
 
 @end

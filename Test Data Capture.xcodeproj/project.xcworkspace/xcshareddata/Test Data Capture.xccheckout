@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>35E9A4A4-528B-463A-8708-68BA25B84397</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Test Data Capture</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D8FAA2E47BE6DD1AAD46E944304A411CB3C0F41E</key>
+		<string>https://github.com/masti13harsh/Data-Capture.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Test Data Capture.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D8FAA2E47BE6DD1AAD46E944304A411CB3C0F41E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/masti13harsh/Data-Capture.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D8FAA2E47BE6DD1AAD46E944304A411CB3C0F41E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D8FAA2E47BE6DD1AAD46E944304A411CB3C0F41E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Test%20Data%20Capture</string>
+		</dict>
+	</array>
+</dict>
+</plist>
